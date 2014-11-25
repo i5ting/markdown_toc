@@ -4,17 +4,19 @@ markdown_toc
 
 ## 用法
 
-		<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
-		<script type="text/javascript" src="../../src/markdown_toc.js"></script>
-			<SCRIPT type="text/javascript" >
-			<!--
-			$(document).ready(function(){
-				$('#tree').markdown_toc({
-					is_auto_number:true
-				});
-			});
-			//-->
-			</SCRIPT>
+```
+<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="../../src/markdown_toc.js"></script>
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+	$('#tree').markdown_toc({
+		is_auto_number:true
+	});
+});
+//-->
+</SCRIPT>
+```
 		
 ## 依赖
 
@@ -25,20 +27,20 @@ markdown_toc
 ## 定制方法
 
 ```
-		<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
-		<script type="text/javascript" src="../../src/markdown_toc.js"></script>
-		<SCRIPT type="text/javascript" >
-		<!--
-		$(document).ready(function(){
-			$('#tree').markdown_toc({
-				is_auto_number:true,
-				compile_headers_with_item:function(item){
-					return " <h"+item.level +"><a href='#" +item.id+ "'>" + item.orderd_title + "</a></h"+item.level +">"
-				}
-			});
-		});
-		//-->
-		</SCRIPT>
+<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="../../src/markdown_toc.js"></script>
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+	$('#tree').markdown_toc({
+		is_auto_number:true,
+		compile_headers_with_item:function(item){
+			return " <h"+item.level +"><a href='#" +item.id+ "'>" + item.orderd_title + "</a></h"+item.level +">"
+		}
+	});
+});
+//-->
+</SCRIPT>
 ```
 
 说明item对象属性包含
