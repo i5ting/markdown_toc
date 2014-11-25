@@ -4,7 +4,7 @@ markdown_toc
 
 ## 用法
 
-```
+```javascript
 <script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
 <script type="text/javascript" src="../../src/markdown_toc.js"></script>
 <SCRIPT type="text/javascript" >
@@ -26,7 +26,7 @@ $(document).ready(function(){
 
 ## 定制方法
 
-```
+```javascript
 <script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
 <script type="text/javascript" src="../../src/markdown_toc.js"></script>
 <SCRIPT type="text/javascript" >
