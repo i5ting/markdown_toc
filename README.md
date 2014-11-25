@@ -4,6 +4,8 @@ markdown_toc
 
 ## 用法
 
+see demo/lite/index.html
+
 ```javascript
 <script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
 <script type="text/javascript" src="../../src/markdown_toc.js"></script>
