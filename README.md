@@ -1,6 +1,7 @@
 markdown_toc
 ============
 
+a flexible markdown toc with more custom style && freedom 
 
 ## 用法
 
