@@ -288,7 +288,6 @@ function factor(opts ,count,current) {
 			},
 			function(opts){
 				console.log('bbbbbb');
-				
 			}
 		],
 		/**
