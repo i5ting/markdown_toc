@@ -1,0 +1,55 @@
+.BlogAnchor {
+  background: #f4f7f9;
+  padding: 10px;
+}
+.BlogAnchor p {
+  font-size: 12px;
+}
+.BlogAnchor .AnchorContent {
+  padding: 5px 0px;
+}
+.BlogAnchor li {
+  list-style: none;
+  padding: 1px 0;
+}
+.BlogAnchor a {
+  text-decoration: none;
+}
+.BlogAnchor a:hover {
+  color: #ad4a23;
+}
+.BlogAnchor .osc_h1 {
+  text-indent: 20px;
+  font-size: 14px;
+}
+.BlogAnchor .osc_h2 {
+  text-indent: 35px;
+  font-size: 13px;
+}
+.BlogAnchor .osc_h3 {
+  text-indent: 50px;
+  font-size: 12px;
+}
+.BlogAnchor .osc_h4 {
+  text-indent: 65px;
+  font-size: 11px;
+}
+.BlogAnchor .osc_h5 {
+  text-indent: 80px;
+  font-size: 10px;
+}
+.BlogAnchor .osc_h6 {
+  text-indent: 95px;
+  font-size: 9px;
+}
+em.corner {
+  font-size: 13px;
+  font-weight: normal;
+  color: #FFF;
+  display: inline-block;
+  line-height: 20px;
+  background: #5cc26f;
+  font-style: normal;
+  padding: 1px 8px;
+  margin-right: 10px;
+}
