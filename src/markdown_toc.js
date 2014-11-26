@@ -72,6 +72,7 @@ function factor(opts ,count,current) {
 	 * 渲染header
 	 */
 	function render_with_headers(opts) {
+		opts.render_before(opts);
 	 	return compile_headers(opts);
 	}
 	
@@ -88,6 +89,7 @@ function factor(opts ,count,current) {
 			html += opts.compile_headers_with_item(item);
 		}
 		
+		opts.render_after(opts, html);
 	 	return html;
 	}
 
@@ -198,6 +200,15 @@ function factor(opts ,count,current) {
 	    highlight_on_scroll();
 	  }
 	}
+	/*
+	 * 初始化中间件
+	 */
+	function init_with_middlewares(opts){
+		var middlewares = opts.middlewares;
+		for(o in middlewares){
+			middlewares[o](opts);
+		}
+	}
 
 	/*
 	 * 初始化
@@ -224,15 +235,16 @@ function factor(opts ,count,current) {
 
 			// 初始化
 			init_with_config(opts);
+			
+			// 初始化middlewares
+			init_with_middlewares(opts);
 
 			// 创建table of content，获取元数据_headers
 			create_toc(opts);
 
 			// 根据_headers生成ztree
-			var r = render_with_headers(opts);
+			render_with_headers(opts);
 
-
-			$(opts._zTree).html("<ul>" + r  +"</ul>");
 			// 根据滚动确定当前位置，并更新ztree
 		    // bind_scroll_event_and_update_postion(opts);
 		});
@@ -261,7 +273,24 @@ function factor(opts ,count,current) {
 		 */
 		refresh_scroll_time: 50,
 		documment_selector: 'body',
-		
+		render_before:function(opts){
+			
+		},
+		render_after:function(opts,compiled_html){
+			$(opts._zTree).html("<ul>" + compiled_html  +"</ul>");
+		},
+		/*
+		 * 中间件
+		 */
+		middlewares:[
+			function(opts){
+				console.log('aaaaaa');
+			},
+			function(opts){
+				console.log('bbbbbb');
+				
+			}
+		],
 		/**
 		{id: 2105 ,level:1,orderd_title: "21.5. 三部分的关系",origin_title:"三部分的关系", open: true,  pId: 21 ,target: "_self", url: "#2105"}
 	
