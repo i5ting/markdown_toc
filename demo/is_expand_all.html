@@ -3,7 +3,6 @@
  <HEAD>
   <TITLE> ZTREE ToC DEMO </TITLE>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" href="../css/zTreeStyle/zTreeStyle.css" type="text/css">
   <style>
 	body {
 	background-color: white;
@@ -26,12 +25,11 @@
 	}
   </style>
 <script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="../js/jquery.ztree.core-3.5.js"></script>
-<script type="text/javascript" src="../src/ztree_toc.js"></script>
+<script type="text/javascript" src="../src/markdown_toc.js"></script>
 	<SCRIPT type="text/javascript" >
 	<!--
 	$(document).ready(function(){
-		$('#tree').ztree_toc({
+		$('#tree').markdown_toc({
 			is_expand_all: false
 		});
 	});
